@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Firebase Subscriber Test</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 20px;
+      background: #111;
+      color: white;
+    }
+
+    .box {
+      background: #222;
+      padding: 25px;
+      border-radius: 12px;
+    }
+
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border: 1px solid #555;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background: #c99a3e;
+      color: white;
+      font-weight: bold;
+    }
+
+    #status {
+      margin-top: 20px;
+      padding: 12px;
+      border-radius: 6px;
+      white-space: pre-wrap;
+    }
+
+    .success {
+      background: #164d28;
+    }
+
+    .error {
+      background: #5c1717;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+
+    <h1>🔥 Firebase Subscriber Test</h1>
+
+    <p>
+      This page tests whether your website can create
+      documents inside the <strong>subscribers</strong>
+      Firestore collection.
+    </p>
+
+    <input
+      id="name"
+      type="text"
+      placeholder="Test name"
+    >
+
+    <input
+      id="email"
+      type="email"
+      placeholder="Test email"
+    >
+
+    <button id="testBtn">
+      Test Firebase Subscription
+    </button>
+
+    <div id="status"></div>
+
+  </div>
+
+  <script type="module">
+
+    import { initializeApp }
+      from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
+    import {
+      getFirestore,
+      collection,
+      addDoc,
+      serverTimestamp
+    }
+      from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+
+    // ==============================
+    // FIREBASE CONFIG
+    // ==============================
+
+    const firebaseConfig = {
+
+      apiKey: "YOUR_WEB_API_KEY",
+
+      authDomain:
+        "catholic-discovery-websi-af85b.firebaseapp.com",
+
+      projectId:
+        "catholic-discovery-websi-af85b",
+
+      storageBucket:
+        "catholic-discovery-websi-af85b.firebasestorage.app",
+
+      messagingSenderId:
+        "981649696506",
+
+      appId:
+        "1:981649696506:web:06ecfceeee7fb90bb50b43"
+
+    };
+
+
+    // ==============================
+    // INITIALIZE FIREBASE
+    // ==============================
+
+    let db;
+
+    try {
+
+      const app = initializeApp(firebaseConfig);
+
+      db = getFirestore(app);
+
+      console.log("Firebase initialized successfully.");
+
+    } catch (error) {
+
+      console.error("Firebase initialization failed:", error);
+
+    }
+
+
+    // ==============================
+    // BUTTON
+    // ==============================
+
+    document
+      .getElementById("testBtn")
+      .addEventListener("click", testSubscription);
+
+
+    // ==============================
+    // TEST
+    // ==============================
+
+    async function testSubscription() {
+
+      const name =
+        document.getElementById("name").value.trim();
+
+      const email =
+        document.getElementById("email").value.trim().toLowerCase();
+
+      const status =
+        document.getElementById("status");
+
+
+      status.className = "";
+
+      status.textContent =
+        "Testing Firebase...";
+
+
+      if (!email) {
+
+        status.textContent =
+          "Please enter an email.";
+
+        status.className = "error";
+
+        return;
+
+      }
+
+
+      try {
+
+        console.log("Attempting Firestore write...");
+
+
+        const docRef = await addDoc(
+
+          collection(db, "subscribers"),
+
+          {
+
+            name: name,
+
+            email: email,
+
+            subscribedAt: serverTimestamp(),
+
+            test: true
+
+          }
+
+        );
+
+
+        console.log(
+          "Document created:",
+          docRef.id
+        );
+
+
+        status.textContent =
+          "✅ SUCCESS!\n\n" +
+          "Firebase accepted the subscriber.\n\n" +
+          "Document ID:\n" +
+          docRef.id +
+          "\n\nCheck Firebase → Firestore → subscribers.";
+
+        status.className = "success";
+
+
+      } catch (error) {
+
+        console.error(
+          "FIREBASE ERROR:",
+          error
+        );
+
+
+        status.textContent =
+          "❌ FIREBASE ERROR\n\n" +
+          error.code +
+          "\n\n" +
+          error.message;
+
+
+        status.className = "error";
+
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
