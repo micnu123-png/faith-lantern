@@ -1,7 +1,5 @@
 "use strict";
 
-console.log("✅ newsletter.js loaded successfully");
-
 import {
   initializeApp
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
@@ -15,7 +13,7 @@ import {
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCWQC1u9HyyrQhNVt3t3Ep1rhtzYmobMQ",
+  apiKey: "AIzaSyCWQC1tU9HyyrQhNVt3t3Ep1rhtzYmobMQ",
   authDomain: "catholic-discovery-websi-af85b.firebaseapp.com",
   projectId: "catholic-discovery-websi-af85b",
   storageBucket: "catholic-discovery-websi-af85b.firebasestorage.app",
@@ -23,122 +21,117 @@ const firebaseConfig = {
   appId: "1:981649696506:web:06ecfceeee7fb90bb50b43"
 };
 
+
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-console.log("✅ Firebase initialized");
+
+const nameInput = document.getElementById("subscriberName");
+const emailInput = document.getElementById("subscriberEmail");
+const subscribeBtn = document.getElementById("subscribeBtn");
+const status = document.getElementById("subscribeStatus");
 
 
-const form = document.getElementById("newsletterForm");
+async function subscribe() {
 
-const nameInput =
-  document.getElementById("subscriberName");
-
-const emailInput =
-  document.getElementById("subscriberEmail");
-
-const button =
-  document.getElementById("subscribeBtn");
-
-const status =
-  document.getElementById("subscribeStatus");
+  const name = nameInput.value.trim();
+  const email = emailInput.value.trim().toLowerCase();
 
 
-if (!form) {
-  console.error("❌ newsletterForm not found");
-} else {
+  // Reset status
 
-  form.addEventListener("submit", async (event) => {
-
-    event.preventDefault();
-
-    const name = nameInput.value.trim();
-    const email = emailInput.value.trim().toLowerCase();
+  status.textContent = "";
+  status.className = "subscribe-status";
 
 
-    status.textContent = "";
-    status.className = "subscribe-status";
+  // Validate email
+
+  if (!email) {
+
+    status.textContent =
+      "Please enter your email address.";
+
+    status.classList.add("error");
+
+    return;
+  }
 
 
-    if (!email) {
-
-      status.textContent =
-        "Please enter your email address.";
-
-      status.classList.add("error");
-
-      return;
-    }
+  const emailPattern =
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 
-    const emailPattern =
-      /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+
+    status.textContent =
+      "Please enter a valid email address.";
+
+    status.classList.add("error");
+
+    return;
+  }
 
 
-    if (!emailPattern.test(email)) {
+  // Disable button
 
-      status.textContent =
-        "Please enter a valid email address.";
-
-      status.classList.add("error");
-
-      return;
-    }
+  subscribeBtn.disabled = true;
+  subscribeBtn.textContent = "Subscribing...";
 
 
-    button.disabled = true;
-    button.textContent = "Subscribing...";
+  try {
+
+    await addDoc(
+      collection(db, "subscribers"),
+      {
+        name: name,
+        email: email,
+        subscribedAt: serverTimestamp()
+      }
+    );
 
 
-    try {
+    // SUCCESS
 
-      const doc = await addDoc(
-        collection(db, "subscribers"),
-        {
-          name: name,
-          email: email,
-          subscribedAt: serverTimestamp()
-        }
-      );
+    status.textContent =
+      "✓ Thank you! You have successfully subscribed.";
+
+    status.classList.add("success");
 
 
-      console.log(
-        "✅ Subscriber saved:",
-        doc.id
-      );
+    // Clear inputs
+
+    nameInput.value = "";
+    emailInput.value = "";
 
 
-      status.textContent =
-        "✓ Thank you! You have successfully subscribed.";
+  } catch (error) {
 
-      status.classList.add("success");
-
-
-      nameInput.value = "";
-      emailInput.value = "";
+    console.error(
+      "Newsletter subscription error:",
+      error
+    );
 
 
-    } catch (error) {
+    status.textContent =
+      "Sorry, we couldn't subscribe you right now. Please try again.";
 
-      console.error(
-        "❌ Subscription failed:",
-        error
-      );
+    status.classList.add("error");
+
+  } finally {
+
+    subscribeBtn.disabled = false;
+    subscribeBtn.textContent = "Subscribe";
+
+  }
+
+}
 
 
-      status.textContent =
-        "Sorry, we couldn't subscribe you right now. Please try again.";
+if (subscribeBtn) {
 
-      status.classList.add("error");
-
-
-    } finally {
-
-      button.disabled = false;
-      button.textContent = "Subscribe";
-
-    }
-
-  });
+  subscribeBtn.addEventListener(
+    "click",
+    subscribe
+  );
 
 }
