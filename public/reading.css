@@ -1,0 +1,206 @@
+/* =========================================================
+   FAITH LANTERN — READINGS PAGE
+   Uses style.css as the main design system.
+========================================================= */
+
+/* ---------------------------------------------------------
+   READINGS HERO
+--------------------------------------------------------- */
+
+.readings-page-hero {
+  min-height: 520px;
+}
+
+/* ---------------------------------------------------------
+   READINGS SECTION
+--------------------------------------------------------- */
+
+.readings-section {
+  background: var(--bg-soft);
+}
+
+.readings-section .section-heading {
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#reading-date {
+  color: var(--muted);
+}
+
+/* ---------------------------------------------------------
+   LITURGICAL INFORMATION
+--------------------------------------------------------- */
+
+.readings-section .posts-grid {
+  margin-bottom: 36px;
+}
+
+.readings-section .post-card {
+  min-height: 180px;
+}
+
+.readings-section .post-card h3 {
+  color: var(--text);
+}
+
+#liturgical-color {
+  color: var(--gold);
+}
+
+/* ---------------------------------------------------------
+   READINGS PANEL
+--------------------------------------------------------- */
+
+.readings-panel {
+  width: 100%;
+}
+
+.readings-header {
+  align-items: flex-start;
+}
+
+.readings-header .card-label {
+  margin-bottom: 8px;
+}
+
+/* ---------------------------------------------------------
+   READING CARDS
+--------------------------------------------------------- */
+
+.reading-card {
+  min-width: 0;
+}
+
+.reading-card .card-label {
+  color: var(--gold);
+}
+
+.reading-card h3 {
+  margin-bottom: 14px;
+  color: var(--text);
+}
+
+.scripture-text {
+  color: var(--muted);
+}
+
+.scripture-text p {
+  margin: 0 0 14px;
+}
+
+.scripture-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------
+   REFLECTION
+--------------------------------------------------------- */
+
+.readings-section > .container > .prayer-box {
+  margin-top: 30px;
+}
+
+.readings-section .prayer-box h3 {
+  margin-bottom: 12px;
+}
+
+.readings-section .prayer-box p {
+  color: var(--muted);
+}
+
+/* ---------------------------------------------------------
+   OFFICIAL SOURCE
+--------------------------------------------------------- */
+
+.readings-section .section-heading.compact {
+  text-align: center;
+}
+
+.readings-section .section-heading.compact p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#official-readings-button {
+  margin-top: 12px;
+}
+
+/* ---------------------------------------------------------
+   DAILY PRAYER
+--------------------------------------------------------- */
+
+.prayer-section {
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(123, 17, 19, 0.16),
+      transparent
+    );
+}
+
+.prayer-section .section-heading {
+  margin-bottom: 0;
+}
+
+.prayer-section .prayer-box {
+  margin-top: 0;
+}
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+  .readings-page-hero {
+    min-height: auto;
+  }
+
+}
+
+@media (max-width: 620px) {
+
+  .readings-section .post-card {
+    min-height: auto;
+  }
+
+  .readings-section .prayer-box {
+    margin-top: 24px;
+  }
+
+}
+
+/* =========================================================
+   READINGS HERO TEXT FIX
+========================================================= */
+
+.readings-section + * {
+  color: var(--text);
+}
+
+.hero h1 {
+  color: var(--text) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
+}
+
+.hero .hero-subtitle {
+  color: var(--gold) !important;
+  opacity: 1 !important;
+}
+
+.hero .hero-description {
+  color: var(--muted) !important;
+  opacity: 1 !important;
+}
+
+.hero .eyebrow {
+  color: var(--gold) !important;
+  opacity: 1 !important;
+}
