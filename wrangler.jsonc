@@ -1,23 +1,20 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
+  "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "catholic-discovery-site",
   "main": "worker.js",
-  "compatibility_date": "2026-05-27",
-  "observability": {
-    "enabled": true
-  },
+  "compatibility_date": "2026-08-19",
+
   "assets": {
-    "directory": ".",
+    "directory": "./public",
     "binding": "ASSETS",
+    "html_handling": "none",
     "run_worker_first": true
   },
+
   "kv_namespaces": [
     {
       "binding": "UPDATE_STATE",
       "id": "46fbed35982743449a4f026a08b01ae3"
     }
-  ],
-  "compatibility_flags": [
-    "nodejs_compat"
   ]
 }
