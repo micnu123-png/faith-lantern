@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Catholic Discovery — Live</title>
+
+    <link rel="stylesheet" href="live.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+            Catholic Discovery
+        </div>
+
+        <div id="liveStatus" class="live-status offline">
+            <span class="live-dot"></span>
+            <span id="statusText">OFFLINE</span>
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+        <section class="video-section">
+
+            <div class="video-container">
+
+                <video
+                    id="liveVideo"
+                    controls
+                    autoplay
+                    muted
+                    playsinline>
+                </video>
+
+                <div id="offlineMessage" class="offline-message">
+
+                    <div class="offline-icon">
+                        📡
+                    </div>
+
+                    <h2>Stream Offline</h2>
+
+                    <p>
+                        Waiting for the live stream...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="stream-info">
+
+                <h1>
+                    Catholic Discovery Live
+                </h1>
+
+                <p>
+                    Live video from OBS Studio
+                </p>
+
+                <div class="viewers">
+                    👁 <span id="viewerCount">0</span> viewers
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        © 2026 Catholic Discovery
+    </footer>
+
+
+    <!-- HLS.js -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+    <!-- Live Player -->
+    <script src="live.js?v=1"></script>
+
+</body>
+
+</html>
