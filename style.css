@@ -905,3 +905,16 @@ h3 {
     padding: 22px;
   }
 }
+
+/* =========================
+   LIVE NAVIGATION
+========================= */
+
+.live-nav-link {
+    color: #d4af37 !important;
+    font-weight: 700;
+}
+
+.live-nav-link:hover {
+    color: #ffffff !important;
+}
