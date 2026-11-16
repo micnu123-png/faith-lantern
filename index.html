@@ -1,1209 +1,166 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <title>Faith Lantern | No Longer in Service</title>
 
-  <!-- =========================
-       SEO
-  ========================== -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#101827">
 
-  <meta
-    name="description"
-    content="Faith Lantern — Catholic daily Mass readings, Gospel reflections, prayers, saints, homilies, Catholic videos, and faith resources to help you grow closer to Christ."
-  >
+  <meta name="description"
+        content="Faith Lantern is no longer in service. Thank you for being part of our journey.">
 
-  <meta
-    name="keywords"
-    content="Faith Lantern, Catholic, Catholic prayers, Catholic daily readings, Daily Mass Readings, Gospel, Saint of the Day, Catholic saints, Catholic homilies, Catholic reflections, Catholic videos, Catholic faith"
-  >
+  <link rel="icon" type="image/png" href="logo.png">
 
-  <meta
-    name="author"
-    content="Faith Lantern"
-  >
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <meta
-    name="robots"
-    content="index, follow"
-  >
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background:
+        radial-gradient(circle at top, #39202a, transparent 55%),
+        linear-gradient(145deg, #101827, #17101b);
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
 
-  <link
-    rel="canonical"
-    href="https://faith-lantern.micnu123.workers.dev/"
-  >
+    .container {
+      width: 100%;
+      max-width: 650px;
+      padding: 50px 30px;
+    }
 
-  <meta
-    name="theme-color"
-    content="#7b1113"
-  >
+    .logo {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 28px;
+    }
 
+    .cross {
+      color: #d9ad45;
+      font-size: 36px;
+      margin-bottom: 22px;
+    }
 
-  <!-- =========================
-       OPEN GRAPH
-  ========================== -->
+    .brand {
+      color: #d9ad45;
+      font-size: 15px;
+      letter-spacing: 5px;
+      font-weight: bold;
+      margin-bottom: 24px;
+    }
 
-  <meta
-    property="og:type"
-    content="website"
-  >
+    h1 {
+      font-size: clamp(30px, 7vw, 48px);
+      line-height: 1.2;
+      margin-bottom: 22px;
+      font-weight: 800;
+    }
 
-  <meta
-    property="og:site_name"
-    content="Faith Lantern"
-  >
+    .divider {
+      width: 75px;
+      height: 3px;
+      background: #d9ad45;
+      margin: 0 auto 28px;
+      border-radius: 5px;
+    }
 
-  <meta
-    property="og:title"
-    content="Faith Lantern | Discover Christ Every Day"
-  >
+    .message {
+      color: #d1d5db;
+      font-size: 17px;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
 
-  <meta
-    property="og:description"
-    content="Catholic daily readings, prayers, saints, reflections, homilies, videos, and faith resources."
-  >
+    .closing {
+      color: #d9ad45;
+      font-size: 16px;
+      line-height: 1.7;
+      font-weight: 600;
+      margin-top: 30px;
+    }
 
-  <meta
-    property="og:image"
-    content="https://faith-lantern.micnu123.workers.dev/logo.png"
-  >
+    footer {
+      margin-top: 55px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      color: #8993a3;
+      font-size: 12px;
+      line-height: 1.8;
+    }
 
-  <meta
-    property="og:url"
-    content="https://faith-lantern.micnu123.workers.dev/"
-  >
+    @media (max-width: 480px) {
+      .container {
+        padding: 35px 15px;
+      }
 
-
-  <!-- =========================
-       TWITTER / X
-  ========================== -->
-
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  >
-
-  <meta
-    name="twitter:title"
-    content="Faith Lantern | Discover Christ Every Day"
-  >
-
-  <meta
-    name="twitter:description"
-    content="Catholic daily readings, prayers, saints, reflections, homilies, videos, and faith resources."
-  >
-
-  <meta
-    name="twitter:image"
-    content="https://faith-lantern.micnu123.workers.dev/logo.png"
-  >
-
-
-  <!-- =========================
-       TITLE
-  ========================== -->
-
-  <title>
-    Faith Lantern | Discover Christ Every Day
-  </title>
-
-
-  <!-- =========================
-       ICONS
-  ========================== -->
-
-  <link
-    rel="icon"
-    type="image/png"
-    href="logo.png"
-  >
-
-  <link
-    rel="apple-touch-icon"
-    href="logo.png"
-  >
-
-
-  <!-- =========================
-       CONNECTIONS
-  ========================== -->
-
-  <link
-    rel="preconnect"
-    href="https://www.googleapis.com"
-  >
-
-  <link
-    rel="preconnect"
-    href="https://www.youtube.com"
-  >
-
-  <link
-    rel="preconnect"
-    href="https://i.ytimg.com"
-  >
-
-
-  <!-- =========================
-       STYLESHEET
-  ========================== -->
-
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
-
+      .message {
+        font-size: 15px;
+      }
+    }
+  </style>
 </head>
 
- 
 <body>
 
-  <!-- Accessibility -->
-  <a class="skip-link" href="#main">
-    Skip to main content
-  </a>
+  <main class="container">
 
-
-  <!-- =========================
-       HEADER
-  ========================== -->
-
-  <header class="site-header" data-header>
-
-    <nav class="navbar" aria-label="Main navigation">
-
-      <a
-        class="brand"
-        href="#home"
-        aria-label="Faith Lantern home"
-      >
-
-        <span class="logo-wrap">
-
-          <img
-            src="logo.png"
-            alt="Faith Lantern logo"
-            data-logo
-          >
-
-          <span
-            class="logo-fallback"
-            aria-hidden="true"
-          >
-            CD
-          </span>
-
-        </span>
-
-        <span class="brand-text">
-          Faith Lantern
-        </span>
-
-      </a>
-
-
-      <!-- Mobile menu -->
-
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-label="Open menu"
-        aria-expanded="false"
-        data-menu-toggle
-      >
-
-        <span></span>
-        <span></span>
-        <span></span>
-
-      </button>
-
-
-      <!-- Navigation -->
-
-      <div
-        class="nav-links"
-        data-nav-links
-      >
-
-        <a href="#home">Home</a>
-
-        <a href="readings.html">Readings</a>
-
-        <a href="live.html" class="live-nav-link">
-  🔴 Live
-</a>
-
-        <a href="#saint">Saint</a>
-
-        <a href="#prayer">Prayer</a>
-
-        <a href="#videos">Videos</a>
-
-        <a href="#calendar">Calendar</a>
-
-        <a href="#posts">Posts</a>
-
-        <a href="#about">About</a>
-
-        <button
-          class="theme-toggle"
-          type="button"
-          aria-label="Toggle dark mode"
-          data-theme-toggle
-        >
-
-          <span
-            data-theme-icon
-            aria-hidden="true"
-          >
-            Moon
-          </span>
-
-          <span data-theme-label>
-            Dark
-          </span>
-
-        </button>
-
-      </div>
-
-    </nav>
-
-  </header>
-
-
-
-  <main id="main">
-
-
-    <!-- =========================
-         HERO
-    ========================== -->
-
-    <section
-      class="hero section"
-      id="home"
+    <img
+      src="logo.png"
+      alt="Faith Lantern Logo"
+      class="logo"
+      onerror="this.style.display='none'"
     >
 
-      <div
-        class="hero-overlay"
-        aria-hidden="true"
-      ></div>
+    <div class="cross">✝</div>
 
+    <p class="brand">FAITH LANTERN</p>
 
-      <div class="container hero-grid">
+    <h1>WE ARE NO LONGER IN SERVICE</h1>
 
+    <div class="divider"></div>
 
-        <div class="hero-content reveal">
+    <p class="message">
+      Thank you for visiting Faith Lantern.
 
-          <p class="eyebrow">
-            Catholic Media Ministry
-          </p>
+      After careful consideration, this website
+      and its online services have been discontinued.
 
+      We sincerely appreciate everyone who visited,
+      supported, and became part of our journey.
+    </p>
 
-          <h1>
-            Discover Christ Every Day
-          </h1>
+    <p class="closing">
+      May God bless you and guide you always.
+      <br>
+      Thank you for being part of Faith Lantern.
+    </p>
 
-
-          <p class="hero-subtitle">
-            Scripture • Prayer • Saints • Faith
-          </p>
-
-
-          <p class="hero-description">
-
-            Welcome to Faith Lantern — a place for
-            Catholic readings, Gospel reflections, prayers,
-            saints, homilies, and inspiring Catholic content.
-
-          </p>
-
-
-          <div class="hero-actions">
-
-            <a
-              class="btn btn-primary"
-              href="#readings"
-            >
-              Today's Readings
-            </a>
-
-
-            <a
-              class="btn btn-outline"
-              href="https://www.youtube.com/@CTF-q5l?sub_confirmation=1"
-              target="_blank"
-              rel="noopener"
-            >
-              Subscribe on YouTube
-            </a>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="hero-brand-card reveal">
-
-          <span class="hero-logo-wrap">
-
-            <img
-              src="logo.png"
-              alt="Faith Lantern"
-              data-logo
-            >
-
-            <span
-              class="logo-fallback large"
-              aria-hidden="true"
-            >
-              CD
-            </span>
-
-          </span>
-
-
-          <p class="card-label">
-            Welcome
-          </p>
-
-
-          <h2>
-            Your Catholic companion for prayer,
-            Scripture, and faith.
-          </h2>
-
-
-          <p>
-            Take a moment each day to pray,
-            reflect, and discover the beauty
-            of the Catholic faith.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         QUICK ACCESS
-    ========================== -->
-
-    <section class="section">
-
-      <div class="container">
-
-        <div class="section-heading reveal">
-
-          <p class="eyebrow">
-            Explore Faith Lantern
-          </p>
-
-          <h2>
-            Grow in Faith
-          </h2>
-
-          <p>
-            Discover Catholic resources for your
-            daily journey with Christ.
-          </p>
-
-        </div>
-
-
-        <div class="posts-grid">
-
-
-          <a
-  class="post-card reveal"
-  href="readings.html"
->
-
-  <p class="card-label">
-    📖 Scripture
-  </p>
-
-  <h3>
-    Daily Readings
-  </h3>
-
-  <p>
-    Read today's First Reading,
-    Psalm, Second Reading, and Gospel.
-  </p>
-
-</a>
-
-
-
-          <a
-            class="post-card reveal"
-            href="#saint"
-          >
-
-            <p class="card-label">
-              ✝️ Saints
-            </p>
-
-            <h3>
-              Saint of the Day
-            </h3>
-
-            <p>
-              Discover the life, witness,
-              and example of a Catholic saint.
-            </p>
-
-          </a>
-
-
-
-          <a
-            class="post-card reveal"
-            href="#prayer"
-          >
-
-            <p class="card-label">
-              🙏 Prayer
-            </p>
-
-            <h3>
-              Daily Prayer
-            </h3>
-
-            <p>
-              Take a moment to pray and place
-              your day in God's hands.
-            </p>
-
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         SAINT OF THE DAY
-    ========================== -->
-
-    <section
-      class="section saint-section"
-      id="saint"
-    >
-
-      <div class="container">
-
-        <div class="section-heading reveal">
-
-          <p class="eyebrow">
-            Saint of the Day
-          </p>
-
-          <h2>
-            Walk With the Saints
-          </h2>
-
-          <p>
-            Learn from the lives of holy men and women
-            who followed Christ faithfully.
-          </p>
-
-        </div>
-
-
-        <article
-          class="hero-brand-card saint-card reveal"
-          data-saint-card
-        >
-
-          <div class="saint-image-wrap">
-
-            <div
-              class="saint-image"
-              data-saint-image
-            >
-              ✝
-            </div>
-
-          </div>
-
-
-          <div class="saint-content">
-
-            <p
-              class="card-label"
-              data-saint-feast
-            >
-              Saint of the Day
-            </p>
-
-
-            <h3 data-saint-name>
-              Discover Today's Saint
-            </h3>
-
-
-            <p data-saint-description>
-              The story of today's saint will appear here.
-            </p>
-
-
-            <p
-              class="saint-patronage"
-              data-saint-patronage
-            ></p>
-
-          </div>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         DAILY PRAYER
-    ========================== -->
-
-    <section
-      class="section prayer-section"
-      id="prayer"
-    >
-
-      <div class="container prayer-grid">
-
-        <div class="section-heading reveal">
-
-          <p class="eyebrow">
-            Daily Prayer
-          </p>
-
-          <h2>
-            Begin and End Your Day With Prayer
-          </h2>
-
-          <p>
-            Pause for a moment and place your
-            heart before God.
-          </p>
-
-        </div>
-
-
-        <article class="prayer-box reveal">
-
-          <span
-            class="cross-icon"
-            aria-hidden="true"
-          >
-            ✝
-          </span>
-
-
-          <p data-prayer-text>
-            Loading today's prayer...
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         VIDEOS
-    ========================== -->
-
-    <section
-      class="section videos-section"
-      id="videos"
-    >
-
-      <div class="container">
-
-        <div class="section-heading reveal">
-
-          <p class="eyebrow">
-            Faith Lantern Videos
-          </p>
-
-          <h2>
-            Watch and Reflect
-          </h2>
-
-          <p>
-            Watch the latest Faith Lantern
-            videos, homilies, reflections, and faith content.
-          </p>
-
-        </div>
-
-
-        <div
-          class="featured-video reveal"
-          data-featured-video
-        >
-
-          <div
-            class="video-loader"
-            aria-hidden="true"
-          ></div>
-
-
-          <div class="featured-info">
-
-            <p class="card-label">
-              Loading
-            </p>
-
-            <h3>
-              Connecting to YouTube...
-            </h3>
-
-            <p>
-              Please wait while the latest video
-              is loaded.
-            </p>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="section-heading compact reveal">
-
-          <p class="eyebrow">
-            Recent Uploads
-          </p>
-
-          <h2>
-            More Catholic Videos
-          </h2>
-
-        </div>
-
-
-        <div
-          class="status-message"
-          role="status"
-          aria-live="polite"
-          data-video-status
-        >
-          Loading latest videos...
-        </div>
-
-
-        <div
-          class="video-grid"
-          data-video-grid
-        ></div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         LITURGICAL CALENDAR
-    ========================== -->
-
-    <section
-      class="section calendar-section"
-      id="calendar"
-    >
-
-      <div class="container">
-
-        <div class="section-heading reveal">
-
-          <p class="eyebrow">
-            Liturgical Calendar
-          </p>
-
-          <h2>
-            Walk Through the Church Year
-          </h2>
-
-          <p>
-            Discover the seasons, feasts, solemnities,
-            and important days of the Catholic liturgical year.
-          </p>
-
-        </div>
-
-
-        <div class="posts-grid">
-
-
-          <article class="post-card reveal">
-
-            <p class="card-label">
-              Today
-            </p>
-
-            <h3 data-calendar-date>
-              Liturgical Day
-            </h3>
-
-            <p data-liturgical-season>
-              Loading the liturgical season...
-            </p>
-
-          </article>
-
-
-
-          <article class="post-card reveal">
-
-            <p class="card-label">
-              Liturgical Season
-            </p>
-
-            <h3 data-season-name>
-              Catholic Calendar
-            </h3>
-
-            <p>
-              Follow the Church through
-              Advent, Christmas, Lent, Easter,
-              and Ordinary Time.
-            </p>
-
-          </article>
-
-
-
-          <article class="post-card reveal">
-
-            <p class="card-label">
-              Explore
-            </p>
-
-            <h3>
-              Catholic Feasts
-            </h3>
-
-            <p>
-              Discover important solemnities,
-              memorials, and feast days.
-            </p>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         POSTS
-    ========================== -->
-
-    <section
-      class="section posts-section"
-      id="posts"
-    >
-
-      <div class="container">
-
-        <div class="section-heading reveal">
-
-          <p class="eyebrow">
-            Faith Lantern
-          </p>
-
-          <h2>
-            Latest Posts & Reflections
-          </h2>
-
-          <p>
-            Read announcements, Catholic reflections,
-            ministry updates, and messages of encouragement.
-          </p>
-
-        </div>
-
-
-        <div
-          class="status-message"
-          role="status"
-          aria-live="polite"
-          data-post-status
-        >
-          Loading posts...
-        </div>
-
-
-        <div
-          class="posts-grid"
-          data-posts-grid
-        ></div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         ABOUT
-    ========================== -->
-
-    <section
-      class="section about-section"
-      id="about"
-    >
-
-      <div class="container about-grid">
-
-
-        <div class="about-content reveal">
-
-          <p class="eyebrow">
-            About Faith Lantern
-          </p>
-
-
-          <h2>
-            Helping Hearts Discover Christ.
-          </h2>
-
-
-          <p>
-            Faith Lantern is a Catholic media
-            ministry created to share the beauty of
-            the Catholic faith through Scripture,
-            prayer, reflection, and Catholic content.
-          </p>
-
-
-          <p>
-            Our mission is simple:
-            help people discover Christ and
-            grow closer to Him each day.
-          </p>
-
-
-          <div class="hero-actions">
-
-            <a
-              class="btn btn-primary"
-              href="https://www.youtube.com/@CTF-q5l"
-              target="_blank"
-              rel="noopener"
-            >
-              Visit YouTube Channel
-            </a>
-
-          </div>
-
-        </div>
-
-
-
-        <div
-          class="mission-list reveal"
-          aria-label="Faith Lantern mission"
-        >
-
-          <div>
-
-            <strong>
-              Scripture
-            </strong>
-
-            <span>
-              Discover God's Word through
-              daily Catholic readings.
-            </span>
-
-          </div>
-
-
-          <div>
-
-            <strong>
-              Prayer
-            </strong>
-
-            <span>
-              Grow in a deeper relationship
-              with God through prayer.
-            </span>
-
-          </div>
-
-
-          <div>
-
-            <strong>
-              Saints
-            </strong>
-
-            <span>
-              Learn from the lives and witness
-              of the saints.
-            </span>
-
-          </div>
-
-
-          <div>
-
-            <strong>
-              Catholic Faith
-            </strong>
-
-            <span>
-              Explore Catholic teaching,
-              reflection, and devotion.
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-<!-- =========================
-     NEWSLETTER
-========================== -->
-
-<section
-  class="section newsletter-section"
-  id="newsletter"
->
-
-  <div class="container">
-
-    <div class="section-heading reveal">
-
-      <p class="eyebrow">
-        Stay Connected
-      </p>
-
-      <h2>
-        Faith Lantern Newsletter
-      </h2>
-
-      <p>
-        Receive Catholic reflections,
-        updates, and new content.
-      </p>
-
-    </div>
-
-    <div class="newsletter-box reveal">
-
-      <input
-        type="text"
-        id="subscriberName"
-        placeholder="Your Name (Optional)"
-        autocomplete="name"
-      >
-
-      <input
-        type="email"
-        id="subscriberEmail"
-        placeholder="Your Email Address"
-        autocomplete="email"
-        required
-      >
-
-      <button
-        id="subscribeBtn"
-        class="btn btn-primary"
-        type="button"
-      >
-        Subscribe
-      </button>
-
-      <!-- Firebase result -->
-      <div
-        id="subscribeStatus"
-        class="subscribe-status"
-        role="status"
-        aria-live="polite"
-      ></div>
-
-    </div>
-
-  </div>
-
-</section>
-    <!-- =========================
-         CONTACT / SOCIAL
-    ========================== -->
-
-    <section
-      class="section contact-section"
-      id="contact"
-    >
-
-      <div class="container contact-grid">
-
-
-        <div class="section-heading reveal">
-
-          <p class="eyebrow">
-            Connect With Us
-          </p>
-
-          <h2>
-            Stay Connected With Faith Lantern
-          </h2>
-
-          <p>
-            Follow Faith Lantern for new videos,
-            prayers, reflections, and Catholic content.
-          </p>
-
-        </div>
-
-
-
-        <div class="social-links reveal">
-
-          <a
-            href="https://www.youtube.com/@CTF-q5l"
-            target="_blank"
-            rel="noopener"
-          >
-            YouTube
-          </a>
-
-
-          <a
-            href="mailto:micnu123@gmail.com"
-          >
-            Email
-          </a>
-
-
-          <a
-            href="https://www.facebook.com/share/14XnuJQmYFW"
-            target="_blank"
-            rel="noopener"
-          >
-            Facebook
-          </a>
-
-
-          <a
-            href="https://www.instagram.com/catho.licdiscovery"
-            target="_blank"
-            rel="noopener"
-          >
-            Instagram
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
+    <footer>
+      &copy; <span id="year"></span> Faith Lantern.
+      <br>
+      Discover Christ Every Day.
+    </footer>
 
   </main>
 
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
 
-
-  <!-- =========================
-       FOOTER
-  ========================== -->
-
-  <footer class="site-footer">
-
-    <div class="container footer-inner">
-
-
-      <a
-        class="footer-brand"
-        href="#home"
-      >
-
-        <span class="logo-wrap small">
-
-          <img
-            src="logo.png"
-            alt=""
-            data-logo
-          >
-
-          <span
-            class="logo-fallback"
-            aria-hidden="true"
-          >
-            CD
-          </span>
-
-        </span>
-
-
-        <span>
-          Faith Lantern
-        </span>
-
-      </a>
-
-
-      <p>
-        ©
-        <span data-current-year></span>
-        Faith Lantern.
-        All Rights Reserved.
-      </p>
-
-    </div>
-
-  </footer>
-
-
-
-  <!-- =========================
-       SCRIPTS
-  ========================== -->
-
-  <script
-    type="module"
-    src="script.js"
-  ></script>
-
-  <script
-  type="module"
-  src="readings.js"
-></script>
-
-  <script
-  type="module"
-  src="newsletter.js"
-    
-></script>
 </body>
 </html>
-
